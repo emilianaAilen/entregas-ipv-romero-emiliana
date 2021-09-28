@@ -8,7 +8,7 @@
 radius = 569.81
 
 [node name="Turret" type="Sprite"]
-position = Vector2( 41.9528, 425.519 )
+position = Vector2( -71.9186, 32.9627 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 projectile_scene = ExtResource( 3 )
@@ -16,13 +16,16 @@ projectile_scene = ExtResource( 3 )
 [node name="FireTimer" type="Timer" parent="."]
 
 [node name="FirePosition" type="Position2D" parent="."]
+visible = false
 position = Vector2( 0, -30.0339 )
 
 [node name="DetectionArea" type="Area2D" parent="."]
+visible = false
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+visible = false
 position = Vector2( -2.99664, -2.99658 )
 shape = SubResource( 1 )
 
