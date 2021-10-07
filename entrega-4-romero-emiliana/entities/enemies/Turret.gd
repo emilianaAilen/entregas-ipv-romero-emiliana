@@ -48,11 +48,12 @@ func _physics_process(delta):
 		
 	if !path.empty():
 		var next_point:Vector2 = to_local(path.front())
+		print("distance: ", global_position.distance_to(next_point))
 		while !path.empty() &&  global_position.distance_to(next_point) < 2:
 			path.pop_front()
 			next_point = path.front()
 			
-		if global_position.distance_to(next_point) < 2:
+		if global_position.distance_to(next_point) > 2:
 			velocity.x = clamp(velocity.x + (next_point - global_position).normalized().x * speed, -max_speed, max_speed)
 		else:
 			path.pop_front()
