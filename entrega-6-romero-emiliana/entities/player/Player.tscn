@@ -221,11 +221,11 @@ texture = SubResource( 5 )
 offset = Vector2( 50, 0 )
 hframes = 15
 vframes = 8
-frame = 29
+frame = 30
 
 [node name="Slime" type="Sprite" parent="Body"]
 position = Vector2( -2.52264, -144.634 )
-scale = Vector2( 0.5, 1e-05 )
+scale = Vector2( 2, 2 )
 texture = ExtResource( 8 )
 flip_h = true
 
